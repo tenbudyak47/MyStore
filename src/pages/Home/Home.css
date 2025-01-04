@@ -1,89 +1,115 @@
-.home-container {
-  font-family: Arial, sans-serif;
-}
-
-/* Hero Section */
-.hero-section {
-  max-width: 100%;
-}
-.slider {
-  width: 1200px;
-  background: red;
-}
-.slider > div {
-  width: 1200px;
-}
-
-.hero-section img {
-  /* width: 100%; */
-  width: 120px;
-  height: 400px;
-  object-fit: cover;
-}
-
-/* Featured Products */
-.featured-products {
-  padding: 20px;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-.featured-products h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-.products-grid {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.product-card {
-  width: 250px;
-  padding: 15px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-.product-card img {
+.slider .swiper {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
-  margin-bottom: 10px;
+  height: 100%;
+  margin-bottom: 50px;
 }
-.product-card:hover {
-  transform: scale(1.05);
+.slider .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  min-height: 600px;
+  background: #ccc;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 450px;
 }
 
-/* News Section */
-.news-section {
-  padding: 20px;
+.slider .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slider-items {
+  position: relative;
+}
+.slider-items .slider-infor {
+  position: absolute;
+  top: 34%;
+  /* transform: translateY(-65%); */
+  left: 8%;
+  text-align: left;
+}
+.slider-items .slider-collection {
+  font-size: 28px;
+}
+.slider-items .slider-title {
+  font-family: "Playfair Display", serif;
+  font-size: 60px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #333;
+  padding-top:19px;
+  padding-bottom:43px;
+}
+.slider-items .btn-buy-now {
+  display: inline-block;
+  border-radius: 23px;
+  background-color: #717fe0;
   text-align: center;
 }
-.news-section h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
+.btn-buy-now a {
+  padding: 0 38px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.466667;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 46px;
 }
-.news-grid {
+.slider .mySwiper {
+  position: relative;
+}
+.slider .btn {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.3);
+  aspect-ratio: 1/1;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border-radius: 50%;
   display: flex;
-  gap: 20px;
   justify-content: center;
-  flex-wrap: wrap;
 }
-.news-card {
-  width: 300px;
-  padding: 15px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  text-align: left;
-  transition: box-shadow 0.3s ease;
-}
-.news-card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.prev,
+.next {
+  align-self: center;
+  font-size: 35px;
+  color: rgb(255, 255, 255, 0.8);
 }
 
+.btn-prev {
+  left: 2%;
+}
+.btn-next {
+  right: 2%;
+}
+.mySwiper:hover .btn-prev,
+.mySwiper:hover .btn-next {
+  opacity: 1;
+}
+.btn-prev:hover,
+.btn-next:hover {
+  background: rgba(0, 0, 0, 1);
+}
+.btn-prev:hover .prev,
+.btn-next:hover .next {
+  color: rgb(255, 255, 255);
+}
+/* ---- End Slider ---- */
+
+#featured-products {
+  min-height: 500px;
+}
 .swiper {
   width: 100%;
   height: 100%;
@@ -93,56 +119,12 @@
   text-align: center;
   font-size: 18px;
   background: #fff;
-
+  background: #b1a9a9;
+  height: 350px;
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-body {
-  background: #000;
-  color: #000;
-}
-
-.swiper {
-  width: 100%;
-  height: 300px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.swiper-slide {
-  background-size: cover;
-  background-position: center;
-}
-
-.mySwiper2 {
-  height: 80%;
-  width: 100%;
-}
-
-.mySwiper {
-  height: 20%;
-  box-sizing: border-box;
-  padding: 10px 0;
-}
-
-.mySwiper .swiper-slide {
-  width: 25%;
-  height: 100%;
-  opacity: 0.4;
-}
-
-.mySwiper .swiper-slide-thumb-active {
-  opacity: 1;
 }
 
 .swiper-slide img {
